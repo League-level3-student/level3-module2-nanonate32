@@ -10,7 +10,21 @@ public class _01_SortedArrayChecker {
      */
     public static boolean intArraySorted(int[] arr) {
         
-        return false;
+        	
+        
+        for(int k = 0; k < arr.length -1; k++) {
+        	if((arr[k] > arr[k+1] )) {
+        		
+        		return false;
+        	
+        	}
+        	 
+        	
+        	}
+       
+        
+        return true;
+        
     }
 
     /*
