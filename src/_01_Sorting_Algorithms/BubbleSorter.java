@@ -1,5 +1,7 @@
 package _01_Sorting_Algorithms;
 
+import java.util.Iterator;
+
 public class BubbleSorter extends Sorter{
     public BubbleSorter() {
         type = "Bubble";
@@ -12,6 +14,8 @@ public class BubbleSorter extends Sorter{
      */
     @Override
     void sort(int[] array, SortingVisualizer display) {
+        for(int i = 0; i < array.length; i++) {
         
+        }
     }
 }
