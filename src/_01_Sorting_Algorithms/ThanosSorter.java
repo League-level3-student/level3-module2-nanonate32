@@ -40,8 +40,14 @@ public class ThanosSorter extends Sorter {
 	 */
 	@Override
 	void sort(int[] arr, SortingVisualizer display) {
+		Random r = new Random();
+		int half = r.nextInt(2);
+		
 		int shouldSnapCounter = 0;
 		int ph = 0;
+		int startpos = 0;
+		int halfpos = 0;
+		int endpos = 0;
 		boolean shouldSnap = false;
 		while (true) {
 			for (int i = 0; i < arr.length - 1; i++) {
@@ -50,8 +56,15 @@ public class ThanosSorter extends Sorter {
 					shouldSnap = true;
 					break;
 				}
+				
+				for (int j = 0; j < arr.length; j++) {
+					if(half == 1) {
+						arr[0]
+					}
+				}
+				
 			}
-			if (shouldSnap) {
+		/*	if (shouldSnap) {
 				shouldSnapCounter++;
 				for (int i = arr.length/2^shouldSnapCounter; i < arr.length; i++) {
 					
@@ -63,9 +76,12 @@ public class ThanosSorter extends Sorter {
 				}
 				 display.updateDisplay();
 			}
-			else {
-				break;
+			*/
+			//else {
+				//break;
 			}
+		
 		}
 	}
-}
+
+
