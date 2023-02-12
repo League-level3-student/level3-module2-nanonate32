@@ -43,27 +43,30 @@ public class ThanosSorter extends Sorter {
 		Random r = new Random();
 		int half = r.nextInt(2);
 		
-		int shouldSnapCounter = 0;
-		int ph = 0;
-		int startpos = 0;
-		int halfpos = 0;
-		int endpos = 0;
+		
+		
+		int start = 0;
+		int end = 0;
 		boolean shouldSnap = false;
 		while (true) {
 			for (int i = 0; i < arr.length - 1; i++) {
 				if (arr[i] > arr[i + 1]) {
-					ph = i;
+					
 					shouldSnap = true;
 					break;
 				}
-				
-				for (int j = 0; j < arr.length; j++) {
-					if(half == 1) {
-						arr[0]
+			}
+			if(half == 0) {
+				end = (start + end) / 2;
 					}
+			else {
+				start = (start + end)/2;
+			}
+				for (int j = start; j < end; j++) {
+			     arr[j] = 0;
 				}
 				
-			}
+			
 		/*	if (shouldSnap) {
 				shouldSnapCounter++;
 				for (int i = arr.length/2^shouldSnapCounter; i < arr.length; i++) {
