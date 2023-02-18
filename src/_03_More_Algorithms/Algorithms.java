@@ -13,6 +13,15 @@ public class Algorithms {
         return num1 + " x " + num2 + " = " + product; 
         
     }
+    
+    public static boolean isPrime(int num) {
+    	for(int i = 2; i < num; i++ ) {
+    		if(num%i == 0) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
     public static boolean isSquare(double num) {
 //    	if(num/Math.sqrt(num) == Math.sqrt(num)) {
 //    		return true;
