@@ -47,6 +47,7 @@ public class ThanosSorter extends Sorter {
 		
 		int start = 0;
 		int end = 0;
+		int mid = (end - start)/2;
 		boolean shouldSnap = false;
 		while (true) {
 			for (int i = 0; i < arr.length - 1; i++) {
@@ -62,11 +63,14 @@ public class ThanosSorter extends Sorter {
 			else {
 				start = (start + end)/2;
 			}
-				for (int j = start; j < end; j++) {
+				for (int j = start; j < mid; j++) {
 			     arr[j] = 0;
 				}
-				
-			
+				start = mid;
+				for(int i = mid; i < end; i++) {
+					arr[i] = 0;
+				}
+			     mid = end;
 		/*	if (shouldSnap) {
 				shouldSnapCounter++;
 				for (int i = arr.length/2^shouldSnapCounter; i < arr.length; i++) {
