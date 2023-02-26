@@ -79,5 +79,29 @@ public class Algorithms {
     	}
     	return longestString;
     }
-    public static boolean containsSOS()
+    public static boolean containsSOS(List<String> message) {
+    	String sos = "..." + " " + "---" + " " + "...";
+    	for (int i = 0; i < message.size(); i++) {
+			if(message.get(i).contains(sos)) {
+    		return true;
+    	}
+		}
+    	
+    	return false;
+    }
+    public static  List<Double> sortScores(List<Double> results) {
+    	for (int i = 0; i < results.size(); i++) {
+    		for(int k = 0; k < results.size() - 1; k++) {
+    			if(results.get(k) > results.get(k+1) ) {
+    				double temp = results.get(k);
+    				results.set(k,results.get(k+1));
+    				results.set(k+1,temp);
+    				
+    			}
+    			
+    		}
+			
+		}
+    	return results;
+    }
 }
