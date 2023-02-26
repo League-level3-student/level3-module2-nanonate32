@@ -39,8 +39,45 @@ public class Algorithms {
     }
     public static int findBrokenEgg(List<String> eggs) {
     for (int i = 0; i < eggs.size(); i++) {
-		i
+		if(eggs.get(i).contains("cracked")){
+			return i;
+		}
 	}
         return 0;
+        
     }
+    public static int countPearls(List<Boolean> oysters) {
+    	int count = 0;
+    	for (int i = 0; i < oysters.size(); i++) {
+			if(oysters.get(i) == true) {
+				count++;
+			}
+			
+		}
+    	
+    	return count;
+    }
+    public static double findTallest(List<Double> peeps) {
+    	double tallest = 0;
+    	for (int i = 0; i < peeps.size(); i++) {
+			if(peeps.get(i) > tallest) {
+				tallest = peeps.get(i);
+			}
+			}
+		
+    	return tallest;
+    }
+    public static String findLongestWord(List<String> words) {
+    	int maxLength = 0;
+    	String longestString = null;
+    	for(String s : words) {
+    		if(s.length() > maxLength) {
+    			maxLength = s.length();
+    			longestString = s;
+    			}
+    		
+    	}
+    	return longestString;
+    }
+    public static boolean containsSOS()
 }
