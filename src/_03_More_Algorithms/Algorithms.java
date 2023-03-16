@@ -1,5 +1,6 @@
 package _03_More_Algorithms;
 
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -122,5 +123,21 @@ public class Algorithms {
     	
     	return unsortedSequences;
     	
+    }
+    public static List<String> sortWords(List<String> words){
+    	for (int i = 0; i < words.size(); i++) {
+			for (int k = 0; k < words.size()-1; k++) {
+			if(words.get(k).compareTo(words.get(k+1)) > 0) {
+				String temp = words.get(k);
+				words.set(k, words.get(k+1));
+				words.set(k+1, temp);
+					
+			
+				
+			}
+			}
+		}
+    	
+    	return words;
     }
 }
